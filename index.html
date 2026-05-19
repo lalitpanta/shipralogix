@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipra Admin SOP</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar - PDF Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Shipra Admin</h2>
+               
+            </div>
+            
+            <div class="toc-container">
+                <h3 class="toc-title">Table of Contents</h3>
+                <div id="toc-list"></div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>📋 Shipra Admin SOP</h1>
+            </div>
+
+            <!-- PDF Viewer -->
+            <div class="pdf-viewer-wrapper">
+                <div id="pdf-container" class="pdf-container">
+                    <canvas id="pdf-canvas"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
