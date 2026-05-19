@@ -79,48 +79,63 @@ body {
 
 .sop-selector {
     margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.15) 0%, rgba(52, 152, 219, 0.05) 100%);
+    border: 2px solid rgba(52, 152, 219, 0.3);
+    border-radius: 8px;
 }
 
 .sop-selector label {
     display: block;
-    font-size: 12px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
 }
 
 .sop-dropdown {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border: 2px solid rgba(52, 152, 219, 0.4);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.08) 100%);
     color: white;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 500;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 35px;
 }
 
 .sop-dropdown:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.25) 0%, rgba(52, 152, 219, 0.15) 100%);
+    border-color: rgba(52, 152, 219, 0.7);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+    transform: translateY(-1px);
 }
 
 .sop-dropdown:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.15);
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4), 0 4px 12px rgba(52, 152, 219, 0.25);
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.25) 0%, rgba(52, 152, 219, 0.15) 100%);
+}
+
+.sop-dropdown:active {
+    transform: translateY(0);
 }
 
 .sop-dropdown option {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2332 100%);
     color: white;
+    padding: 10px;
+    font-weight: 500;
 }
 
 .toc-container {
