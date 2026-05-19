@@ -156,7 +156,32 @@ async function jumpToPage(pageNum) {
 
 // Load PDF on page load
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize with Admin SOP
     loadPdf('finalShipra_Admin_SOP.pdf');
+    
+    // Setup SOP dropdown selector
+    const sopDropdown = document.getElementById('sop-dropdown');
+    const contentHeader = document.querySelector('.content-header h1');
+    
+    sopDropdown.addEventListener('change', (e) => {
+        const selectedType = e.target.value;
+        let pdfFile = '';
+        let headerText = '';
+        
+        if (selectedType === 'admin') {
+            pdfFile = 'finalShipra_Admin_SOP.pdf';
+            headerText = '📋 Shipra Admin SOP';
+        } else if (selectedType === 'customer') {
+            pdfFile = 'Shipra_Customer_SOP.pdf';
+            headerText = '📋 Shipra Customer SOP';
+        }
+        
+        // Update header
+        contentHeader.textContent = headerText;
+        
+        // Load the selected PDF
+        loadPdf(pdfFile);
+    });
     
     // Mobile menu functionality
     const sidebar = document.querySelector('.sidebar');
